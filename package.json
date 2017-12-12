@@ -1,0 +1,22 @@
+{
+  "name": "kidpass_challenge",
+  "version": "1.0.0",
+  "description": "Coding challenge for kidpass",
+  "engines": {
+    "node": "^9"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build-client": "webpack",
+    "build-client-watch": "webpack -w",
+    "start": "node server"
+  },
+  "author": "Caryn McCarthy",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
