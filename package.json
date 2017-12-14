@@ -9,8 +9,7 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "start": "nodemon server",
-    "start-dev": "npm run build-client-watch & npm start"
+    "start": "npm run build-client-watch & nodemon server"
   },
   "author": "Caryn McCarthy",
   "license": "ISC",
