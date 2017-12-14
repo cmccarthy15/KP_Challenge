@@ -19,10 +19,23 @@ h1 {
   max-height: 75vh;
 }
 
-h3 {
+.listing-boro {
   background-color: #00b4f0a6;
   margin: 3px 0;
   padding: 10px;
+}
+
+.boros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00b4f0a6;
+  margin: 3px 0;
+  padding: 10px;
+}
+
+.boros > h3 {
+  margin: 0;
 }
 
 h4 {
@@ -35,4 +48,21 @@ p {
   background-color: #bdecfcb2;
   margin: 3px 0;
   padding: 10px;
+}
+
+i {
+  margin-left: 1em;
+}
+
+.number {
+  background-color: white;
+  font-weight: bold;
+  -webkit-border-radius: .8em;
+  border-radius: .8em;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  padding: .3em;
+  margin-left: 1em;
+
 }

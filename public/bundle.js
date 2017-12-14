@@ -18310,8 +18310,8 @@ var Main = function (_Component) {
     _this.state = {
       boros: boros,
       neighborhoods: neighborhoods
-      // this.handleSelect = this.handleSelect.bind(this);
-    };return _this;
+    };
+    return _this;
   }
 
   _createClass(Main, [{
@@ -18331,11 +18331,10 @@ var Main = function (_Component) {
       ? boros[boroWeight - 1].numSelect-- // decrement the number selected for that boro by one
       : boros[boroWeight - 1].numSelect++; // increment the number selected for that boro by one
 
-      console.log('soooo now at the end..... BOROS -----> ', boros);
-      console.log('aaaaaaand neighborhoods ---->', neighborhoods);
+      // console.log('soooo now at the end..... BOROS -----> ', boros)
+      // console.log('aaaaaaand neighborhoods ---->', neighborhoods)
 
-      // create a new neighborhoods object with an update neighborhood
-      // let updatedNeighborhoods = Object.assign({}, neighborhoods, )
+      this.setState({ boros: boros, neighborhoods: neighborhoods });
     }
   }, {
     key: 'render',
@@ -18379,7 +18378,7 @@ var Main = function (_Component) {
                   { className: 'single-mapping', key: boroInfo.id },
                   _react2.default.createElement(
                     'h3',
-                    null,
+                    { className: 'listing-boro' },
                     boroInfo.name
                   ),
                   boroInfo.macros.map(function (macro) {
@@ -18397,7 +18396,12 @@ var Main = function (_Component) {
                           { onClick: function onClick() {
                               return _this2.handleSelect(index, macro.id, boroInfo.weight);
                             }, key: hood.id },
-                          hood.name
+                          hood.name,
+                          hood.selected && _react2.default.createElement(
+                            'i',
+                            null,
+                            '\u2714\uFE0F'
+                          )
                         );
                       })
                     );
@@ -18418,11 +18422,16 @@ var Main = function (_Component) {
             this.state.boros.map(function (boro) {
               return _react2.default.createElement(
                 'div',
-                { key: boro.id },
+                { key: boro.id, className: 'boros' },
                 _react2.default.createElement(
                   'h3',
                   null,
                   boro.name
+                ),
+                boro.numSelect > 0 && _react2.default.createElement(
+                  'i',
+                  { className: 'number' },
+                  boro.numSelect
                 )
               );
             })

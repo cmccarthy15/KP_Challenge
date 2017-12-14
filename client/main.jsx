@@ -10,7 +10,6 @@ export default class Main extends Component {
       boros: boros,
       neighborhoods: neighborhoods
     }
-    // this.handleSelect = this.handleSelect.bind(this);
   }
 
   handleSelect(index, macroId, boroWeight) {
@@ -28,13 +27,11 @@ export default class Main extends Component {
       ? boros[boroWeight - 1].numSelect-- // decrement the number selected for that boro by one
       : boros[boroWeight - 1].numSelect++ // increment the number selected for that boro by one
 
-    console.log('soooo now at the end..... BOROS -----> ', boros)
-    console.log('aaaaaaand neighborhoods ---->', neighborhoods)
+    // console.log('soooo now at the end..... BOROS -----> ', boros)
+    // console.log('aaaaaaand neighborhoods ---->', neighborhoods)
 
+    this.setState({boros, neighborhoods})
 
-
-      // create a new neighborhoods object with an update neighborhood
-      // let updatedNeighborhoods = Object.assign({}, neighborhoods, )
 
   }
 
@@ -50,11 +47,11 @@ export default class Main extends Component {
             <div id="neighbor-scroll">
               {boros.map(boroInfo => (
                 <div className="single-mapping" key={boroInfo.id}>
-                  <h3>{boroInfo.name}</h3>
+                  <h3 className="listing-boro">{boroInfo.name}</h3>
                   {boroInfo.macros.map(macro => (
                     <div key={macro.id}>
                       {macro.name !== boroInfo.name && <h4>{macro.name}</h4>}
-                      { neighborhoods[macro.id].map((hood, index) => <p onClick={() => this.handleSelect(index, macro.id, boroInfo.weight)} key={hood.id}>{hood.name}</p>) }
+                      {neighborhoods[macro.id].map((hood, index) => <p onClick={() => this.handleSelect(index, macro.id, boroInfo.weight)} key={hood.id}>{hood.name}{hood.selected && <i>✔️</i>}</p>) }
                     </div>
                   ))}
                 </div>
@@ -65,8 +62,9 @@ export default class Main extends Component {
             <h2>Selected Boros</h2>
             <hr />
             {this.state.boros.map( boro => (
-              <div key={boro.id}>
+              <div key={boro.id} className="boros">
                 <h3>{boro.name}</h3>
+                {boro.numSelect > 0 && <i className="number">{boro.numSelect}</i>}
               </div>
             ))}
           </section>
