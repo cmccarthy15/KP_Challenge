@@ -63,18 +63,6 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
-<<<<<<< HEAD
-/******/ ({
-
-/***/ 14:
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/cmccarthy/Desktop/GHP/job-hunt/Kidpass_challenge/client/index.jsx'");
-
-/***/ })
-
-/******/ });
-=======
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
@@ -18479,5 +18467,4 @@ module.exports = {"error":{"message":"","code":"0"},"data":[{"borough":{"name":"
 
 /***/ })
 /******/ ]);
->>>>>>> parsing-json
 //# sourceMappingURL=bundle.js.map
