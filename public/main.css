@@ -1,0 +1,38 @@
+#section-holder {
+  display: flex;
+  width: 90vw;
+  margin: 0 5vw;
+  justify-content: space-between;
+}
+
+#section-holder > * {
+  flex-basis: 40vw;
+  text-align: center;
+}
+
+h1 {
+  color: #00b4f0
+}
+
+#neighbor-scroll{
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+h3 {
+  background-color: #00b4f0a6;
+  margin: 3px 0;
+  padding: 10px;
+}
+
+h4 {
+  background-color: #50c4eba6;
+  margin: 3px 0;
+  padding: 10px;
+}
+
+p {
+  background-color: #bdecfcb2;
+  margin: 3px 0;
+  padding: 10px;
+}
