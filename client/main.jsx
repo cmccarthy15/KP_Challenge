@@ -74,6 +74,14 @@ export default class Main extends Component {
   }
 }
 
+
+/*  Helper function to return an object of the boros array and neighborhoods objects that will be used on the component state
+
+Boros: array or boroughs (name, id, weight, macros array) where index match the weight - 1 of the borough
+
+Neighborhoods: an object where macroId keys map to values that are an array of neighborhood objects that belong to that macro
+
+*/
 function getBoros(data) {
   let neighborhoods = {}
   let boros = data.map(elem => {

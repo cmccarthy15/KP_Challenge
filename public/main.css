@@ -10,9 +10,14 @@
   text-align: center;
 }
 
+header {
+  text-align: center;
+}
+
 h1 {
   color: #00b4f0
 }
+
 
 #neighbor-scroll{
   overflow-y: scroll;
@@ -45,7 +50,7 @@ h4 {
 }
 
 p {
-  background-color: #bdecfcb2;
+  background-color: white;
   margin: 3px 0;
   padding: 10px;
 }

@@ -9,7 +9,8 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "start": "npm run build-client-watch & nodemon server"
+    "start": "npm run build-client-watch & nodemon server",
+    "test": "mocha ./client/*.spec.js --compilers js:babel-register"
   },
   "author": "Caryn McCarthy",
   "license": "ISC",
@@ -19,6 +20,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "mocha": "^4.0.1",
     "webpack": "^3.10.0"
   },
   "dependencies": {

@@ -18444,9 +18444,16 @@ var Main = function (_Component) {
   return Main;
 }(_react.Component);
 
+/*  Helper function to return an object of the boros array and neighborhoods objects that will be used on the component state
+
+Boros: array or boroughs (name, id, weight, macros array) where index match the weight - 1 of the borough
+
+Neighborhoods: an object where macroId keys map to values that are an array of neighborhood objects that belong to that macro
+
+*/
+
+
 exports.default = Main;
-
-
 function getBoros(data) {
   var neighborhoods = {};
   var boros = data.map(function (elem) {
