@@ -2,7 +2,7 @@
 
 ##To get started:
 - npm install
-- npm run start-dev
+- npm start
 - to run tests: npm test
 
 ## Notes:
